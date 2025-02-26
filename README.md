@@ -48,3 +48,15 @@ export default tseslint.config({
   },
 })
 ```
+
+
+# Crash Land RPG
+
+## Description
+Crash Land is a small RPG game set in a fantastical world where players can create and manage characters, embark on adventures, and face challenging quests.
+
+## Features
+- User authentication and authorization
+- Character creation and management
+- Interactive game interface
+- RESTful API for backend communication
