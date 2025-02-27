@@ -68,3 +68,8 @@ Crash Land RPG takes players on a nostalgic journey through a mysterious world f
 - **Backend:** Node.js, Express, TypeScript, MongoDB, Mongoose, JWT
 - **Frontend:** React, Vite, TypeScript, React Router, Axios, CSS (custom retro styling)
 - **Other Tools:** dotenv, ts-node, nodemon (optional), and more
+
+## Project Structure
+
+- **Backend**: [Backend Repository](https://github.com/DiamondHands89/Mullins_Kevin_CrashRPG_Backend)
+- **Frontend**: [Frontend Repository](https://github.com/DiamondHands89/Mullins_Kevin_CrashRPG_Frontend)
