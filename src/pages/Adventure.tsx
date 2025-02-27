@@ -134,42 +134,42 @@ const storyData: StorySegment[] = [
 ];
 
 const Adventure: React.FC = () => {
-  const { updateDiamonds, updateStat } = useContext(GameContext);
-  const [currentId, setCurrentId] = useState<number>(1);
-  // Track visited segments so rewards (diamondReward/statBonus) happen only once per segment
-  const [visitedSegments, setVisitedSegments] = useState<number[]>([]);
-
-  const currentSegment = storyData.find(segment => segment.id === currentId);
-  if (!currentSegment) return <div>Story not found</div>;
-
-  // Award rewards only on first visit
-  if (!visitedSegments.includes(currentId)) {
-    if (currentSegment.diamondReward) {
-      updateDiamonds(currentSegment.diamondReward);
+    const { updateDiamonds, updateStat } = useContext(GameContext);
+    const [currentId, setCurrentId] = useState<number>(1);
+    // Tracking visited segments so rewards are granted only once per segment
+    const [visitedSegments, setVisitedSegments] = useState<number[]>([]);
+  
+    const currentSegment = storyData.find(segment => segment.id === currentId);
+    if (!currentSegment) return <div className="page-container">Story not found</div>;
+  
+    // Award rewards (diamonds/stat bonus) only on first visit of each segment
+    if (!visitedSegments.includes(currentId)) {
+      if (currentSegment.diamondReward) {
+        updateDiamonds(currentSegment.diamondReward);
+      }
+      if (currentSegment.statBonus) {
+        updateStat(currentSegment.statBonus.stat, currentSegment.statBonus.bonus);
+      }
+      setVisitedSegments([...visitedSegments, currentId]);
     }
-    if (currentSegment.statBonus) {
-      updateStat(currentSegment.statBonus.stat, currentSegment.statBonus.bonus);
-    }
-    setVisitedSegments([...visitedSegments, currentId]);
-  }
-
-  return (
-    <div style={{ padding: '1rem' }}>
-      <h2>Adventure in Crash Land</h2>
-      <p>{currentSegment.text}</p>
-      <div>
-        {currentSegment.options.map((option, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentId(option.nextId)}
-            style={{ marginRight: '0.5rem', marginBottom: '0.5rem' }}
-          >
-            {option.text}
-          </button>
-        ))}
+  
+    return (
+      <div className="page-container adventure-container">
+        <h2 className="oldschool-text">Adventure in Crash Land</h2>
+        <p className="oldschool-text">{currentSegment.text}</p>
+        <div>
+          {currentSegment.options.map((option, index) => (
+            <button
+              key={index}
+              className="button"
+              onClick={() => setCurrentId(option.nextId)}
+            >
+              {option.text}
+            </button>
+          ))}
+        </div>
       </div>
-    </div>
-  );
-};
-
-export default Adventure;
+    );
+  };
+  
+  export default Adventure;
