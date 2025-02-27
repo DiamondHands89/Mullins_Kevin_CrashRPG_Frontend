@@ -49,14 +49,22 @@ export default tseslint.config({
 })
 ```
 
+## Overview
 
-# Crash Land RPG
-
-## Description
-Crash Land is a small RPG game set in a fantastical world where players can create and manage characters, embark on adventures, and face challenging quests.
+Crash Land RPG takes players on a nostalgic journey through a mysterious world filled with branching story paths, treasure rewards, and stat upgrades. As you progress, you'll explore diverse areas—from eerie forests to bustling marketplaces—and overcome various challenges to earn diamonds and enhance your character.
 
 ## Features
-- User authentication and authorization
-- Character creation and management
-- Interactive game interface
-- RESTful API for backend communication
+
+- **Interactive Adventure:** A text-based, branching storyline within the world of Crash Land.
+- **Stat and Currency System:** Earn diamonds and use them to upgrade your character's stats such as health, mana, strength, and agility.
+- **Backend API:** RESTful endpoints built with Express and TypeScript, interfacing with a MongoDB database.
+- **Modern Frontend:** A Vite-powered React application with an authentic old-school RPG visual style.
+- **User Authentication:** (Optional) JWT-based authentication for user registration and login.
+- **State Management:** Context API for managing game state across the React application.
+- **Responsive Navigation:** Multiple pages including Adventure, Dashboard, Upgrade, and Characters Dashboard.
+
+## Technologies
+
+- **Backend:** Node.js, Express, TypeScript, MongoDB, Mongoose, JWT
+- **Frontend:** React, Vite, TypeScript, React Router, Axios, CSS (custom retro styling)
+- **Other Tools:** dotenv, ts-node, nodemon (optional), and more
