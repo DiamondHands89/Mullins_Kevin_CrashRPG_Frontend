@@ -1,12 +1,15 @@
 import React from 'react';
 
 const Home: React.FC = () => {
-    return (
-        <div>
-            <h1>Welcome to Crash RPG</h1>
-            <p>Embark on an epic adventure!</p>
-        </div>
-    );
+  return (
+    <div style={{ padding: '1rem' }}>
+      <h2>Welcome to Crash Land!</h2>
+      <p>
+        Embark on an adventure through Crash Land—a mysterious world full of danger and wonder.
+        Earn diamonds by making brave choices, and use them to upgrade your character's stats.
+      </p>
+    </div>
+  );
 };
 
 export default Home;
