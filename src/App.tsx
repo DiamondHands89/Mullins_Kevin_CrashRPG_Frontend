@@ -7,6 +7,7 @@ import Dashboard from './pages/Dashboard';
 import Upgrade from './pages/Upgrade';
 import Login from './pages/LoginPage';
 import CharactersDashboard from './pages/CharactersDashboard'
+import RegisterPage from './pages/RegisterPage';
 
 const App: React.FC = () => {
   return (
@@ -19,6 +20,7 @@ const App: React.FC = () => {
         <Route path="/upgrade" element={<Upgrade />} />
         <Route path="/characters" element={<CharactersDashboard />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/register-page" element={<RegisterPage />} />
         <Route path="/characters-dashboard" element={<CharactersDashboard />} />
       </Routes>
     </Router>

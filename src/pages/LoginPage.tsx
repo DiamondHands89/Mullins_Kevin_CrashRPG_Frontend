@@ -12,7 +12,7 @@ const Login: React.FC = () => {
     setError(''); // Clear any previous error
 
     try {
-      // Make a POST request to your backend login endpoint
+      // POST request to backend login endpoint
       const response = await axios.post('/api/auth/login', {
         username,
         password,
