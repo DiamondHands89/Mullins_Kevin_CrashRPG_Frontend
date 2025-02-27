@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Adventure from './pages/Adventure';
 import Dashboard from './pages/Dashboard';
 import Upgrade from './pages/Upgrade';
+import CharactersDashboard from './pages/CharactersDashboard'
 
 const App: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const App: React.FC = () => {
         <Route path="/adventure" element={<Adventure />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/upgrade" element={<Upgrade />} />
+        <Route path="/characters" element={<CharactersDashboard />} />
       </Routes>
     </Router>
   );
